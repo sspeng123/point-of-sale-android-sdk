@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/leftid"
+        android:layout_width="350dp" android:layout_height="wrap_content" android:orientation="vertical"
+        >
+        <include layout="@layout/row_listview_header" />
+
+        <!--<View android:background="@style/list_item_seperator_layout" />-->
+        <ListView android:id="@+id/listview_orderDetail"
+            android:layout_width="350dp" android:layout_height="wrap_content"
+            android:background="#88323232" />
+        <include layout="@layout/row_listview_footer"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_toRightOf="@+id/leftid"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg"
+        android:orientation="vertical" >
+
+        <com.pengshi.wokx.util.ScrollLayout
+            android:id="@+id/scr"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp">
+        </com.pengshi.wokx.util.ScrollLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_scr_bottom"
+            android:orientation = "horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="15dp"
+            android:gravity="center" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_title"
+            android:layout_alignParentBottom="true" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <HorizontalScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+                    <LinearLayout
+                        android:id="@+id/menuTypes"
+                        android:orientation = "horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="100px" >
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <Button
+                    android:id="@+id/button_toOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_toLeftOf="@+id/imageButton_call"
+                    android:background="@drawable/button"
+                    android:text="去确认下单 (确认下单后才能为您做菜！)"
+                    android:textColor="#0000ff" />
+                <ImageButton
+                    android:id="@+id/imageButton_call"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/call" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview_menuDesc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#88999999"
+        android:minHeight="50dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textColor="@color/color_theme"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

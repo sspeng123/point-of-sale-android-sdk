@@ -51,6 +51,7 @@ android {
     buildConfigField "String", "GIT_SHA", "\"${gitSha()}\""
     consumerProguardFiles 'consumer-proguard-rules.pro'
   }
+  namespace 'com.squareup.sdk.pos'
 }
 
 apply from: rootProject.file('gradle/checkstyle.gradle')

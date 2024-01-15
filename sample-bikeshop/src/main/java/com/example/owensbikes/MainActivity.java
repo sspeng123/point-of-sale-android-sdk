@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     posClient = PosSdk.createClient(this, BuildConfig.CLIENT_ID);
     dialogComposer = new DialogComposer(this, posClient);
     transactionResultHandler = new TransactionResultHandler(this, posClient, dialogComposer);
+
     dataLoader = BikeApplication.from(this).getDataLoader();
     boolean isTablet = getResources().getBoolean(R.bool.isTablet);
     boolean isLandscape =

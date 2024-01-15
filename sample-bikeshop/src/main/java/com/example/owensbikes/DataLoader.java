@@ -53,6 +53,27 @@ public class DataLoader {
     mainHandler = new Handler(Looper.getMainLooper());
   }
 
+  public  void loadItemsFromMyShop(final Listener listener){
+    this.listener = listener;
+    if (data != null) {
+      requestInFlight = false;
+      mainHandler.post(new Runnable() {
+        @Override public void run() {
+          if (listener != null) {
+            listener.onDataLoaded(data.items);
+            clearListener();
+          }
+        }
+      });
+      return;
+    }
+
+    if (requestInFlight) {
+      return;
+    }
+    requestInFlight = true;
+  }
+
   public void loadItemsFromAssets(final Listener listener) {
     this.listener = listener;
     if (data != null) {

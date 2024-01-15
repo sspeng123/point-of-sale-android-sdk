@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="650dp"  android:background="#88ffffff"
+    android:layout_height="wrap_content" android:layout_gravity="center_horizontal" android:id="@+id/listview_footer">
+
+    <TextView
+        android:id="@+id/listview_textview_total_num"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="200dp"
+        android:textColor="@color/color_black"
+        />
+
+    <TextView
+        android:id="@+id/listview_textview_total_prices"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_black"
+        />
+
+</LinearLayout>

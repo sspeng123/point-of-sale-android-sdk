@@ -58,6 +58,7 @@ android {
       project.addClientIdField(buildTypes.release)
     }
   }
+  namespace 'com.example.hellocharge'
 }
 
 void addClientIdField(def buildType) {
